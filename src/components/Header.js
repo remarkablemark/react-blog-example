@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
@@ -7,6 +8,17 @@ import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 export const height = 64;
 
 class Header extends PureComponent {
+  static propTypes = {
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }).isRequired,
+    history: PropTypes.shape({
+      goBack: PropTypes.func,
+      length: PropTypes.number,
+      push: PropTypes.func,
+    }).isRequired,
+  };
+
   _handleClick = () => {
     const { history: { goBack, length, push } } = this.props;
     length < 4 ? push('/') : goBack();

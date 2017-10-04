@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import CircularProgress from 'material-ui/CircularProgress';
 import Divider from 'material-ui/Divider';
@@ -13,6 +14,17 @@ const contentStyle = {
 const paperStyle = { padding: 16 };
 
 export default class Post extends PureComponent {
+  static propTypes = {
+    fetchPost: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    post: PropTypes.shape({
+      content: PropTypes.string.isRequired,
+      date: PropTypes.instanceOf(Date).isRequired,
+      title: PropTypes.string.isRequired,
+    }),
+    slug: PropTypes.string.isRequired,
+  };
+
   componentDidMount() {
     const { fetchPost, id, post, slug } = this.props;
     if (!post) {

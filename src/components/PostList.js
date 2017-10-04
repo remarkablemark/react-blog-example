@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Waypoint from 'react-waypoint';
 import moment from 'moment';
@@ -10,6 +11,20 @@ import { truncate } from '../utilities';
 const TRUNCATION_LIMIT = 150;
 
 export default class PostList extends PureComponent {
+  static propTypes = {
+    fetchPosts: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    posts: PropTypes.arrayOf(
+      PropTypes.shape({
+        date: PropTypes.instanceOf(Date),
+        id: PropTypes.string,
+        slug: PropTypes.string,
+        summary: PropTypes.string,
+        title: PropTypes.string,
+      })
+    ).isRequired,
+  };
+
   render() {
     const { fetchPosts, isLoading, posts } = this.props;
 

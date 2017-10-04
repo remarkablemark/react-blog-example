@@ -1,0 +1,13 @@
+{
+  "extends": [
+	"react-app",
+	"eslint:recommended",
+	"plugin:react/recommended"
+  ],
+  "rules": {
+	"linebreak-style": ["error", "unix"],
+	"no-cond-assign": ["error"],
+	"quotes": ["error", "single", { "avoidEscape": true }],
+	"semi": ["error", "always"]
+  }
+}
