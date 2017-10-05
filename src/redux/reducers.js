@@ -6,7 +6,7 @@ const initialState = {
   items: [],
 };
 
-const posts = (state = initialState, action) => {
+export const posts = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_POSTS:
       return Object.assign({}, state, {

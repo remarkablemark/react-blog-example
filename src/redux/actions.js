@@ -9,7 +9,7 @@ const {
 
 // action constants
 export const FETCH_POSTS = 'FETCH_POSTS';
-export const RECEIVE_POSTS = 'RECEIVE_POSTS ';
+export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 
 // generate a list of recent dates sorted in ascending order
 const recentDates = Array(50)

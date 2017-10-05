@@ -1,12 +1,38 @@
 /**
+ * Capitalizes string.
+ *
+ * @param  {String} string
+ * @return {String}
+ */
+const capitalize = string => {
+  if (!string) return string;
+  return string[0].toUpperCase() + string.slice(1);
+};
+
+/**
  * Capitalizes words.
  *
  * @param  {String} words
  * @return {String}
  */
 export const capitalizeWords = words => {
-  return words.split(' ').reduce((accumulatedWords, word) => {
-    return `${accumulatedWords} ${word[0].toUpperCase() + word.slice(1)}`;
+  const wordsArray = words.split(' ');
+
+  // single word
+  if (wordsArray.length === 1) {
+    return capitalize(words);
+  }
+
+  // multiple words
+  return wordsArray.reduce((accumulatedWords, word) => {
+    // first word
+    if (!accumulatedWords) return capitalize(word);
+
+    // empty array item
+    if (!word) return accumulatedWords;
+
+    // concatenate word
+    return `${accumulatedWords} ${capitalize(word)}`;
   }, '');
 };
 
