@@ -6,7 +6,7 @@ import moment from 'moment';
 import CircularProgress from 'material-ui/CircularProgress';
 import Divider from 'material-ui/Divider';
 import { List, ListItem } from 'material-ui/List';
-import { truncate } from '../utilities';
+import { truncate } from '../helpers/utilities';
 
 export const TRUNCATION_LIMIT = 150;
 

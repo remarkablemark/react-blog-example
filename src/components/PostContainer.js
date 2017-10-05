@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { find } from 'lodash';
-import { fetchPost } from '../actions';
+import { fetchPost } from '../redux/actions';
 import Post from './Post';
 
 const mapStateToProps = (state, ownProps) => {

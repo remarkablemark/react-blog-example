@@ -4,7 +4,7 @@ import moment from 'moment';
 import CircularProgress from 'material-ui/CircularProgress';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
-import { getFullYear } from '../utilities';
+import { getFullYear } from '../helpers/utilities';
 import { height as headerHeight } from './Header';
 
 const footerHeight = 50;

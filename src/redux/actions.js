@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { capitalizeWords } from './utilities';
+import { capitalizeWords } from '../helpers/utilities';
 
 const {
   date: { past, recent },

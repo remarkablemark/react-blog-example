@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './Header';
 import PostListContainer from './PostListContainer';
 import PostContainer from './PostContainer';
-import store from '../store';
+import store from '../redux/store';
 
 export default class App extends PureComponent {
   render() {

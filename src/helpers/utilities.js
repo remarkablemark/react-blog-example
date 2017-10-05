@@ -39,6 +39,12 @@ export const truncate = (text, limit) => {
     text = text.substring(0, limit);
   }
 
-  // truncate to last whitespace and trim trailing whitespace/periods
-  return text.substring(0, text.lastIndexOf(' ')).replace(/[\s.]+$/g, '');
+  // truncate to last whitespace if applicable
+  const lastSpaceIndex = text.lastIndexOf(' ');
+  if (lastSpaceIndex !== -1) {
+    text = text.substring(0, lastSpaceIndex);
+  }
+
+  // trim trailing whitespace/periods
+  return text.replace(/[\s.]+$/g, '');
 };
