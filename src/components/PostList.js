@@ -8,7 +8,7 @@ import Divider from 'material-ui/Divider';
 import { List, ListItem } from 'material-ui/List';
 import { truncate } from '../utilities';
 
-const TRUNCATION_LIMIT = 150;
+export const TRUNCATION_LIMIT = 150;
 
 export default class PostList extends PureComponent {
   static propTypes = {
@@ -22,7 +22,7 @@ export default class PostList extends PureComponent {
         summary: PropTypes.string,
         title: PropTypes.string,
       })
-    ).isRequired,
+    ),
   };
 
   render() {

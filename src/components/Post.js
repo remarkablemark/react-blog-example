@@ -18,9 +18,9 @@ export default class Post extends PureComponent {
     fetchPost: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     post: PropTypes.shape({
-      content: PropTypes.string.isRequired,
-      date: PropTypes.instanceOf(Date).isRequired,
-      title: PropTypes.string.isRequired,
+      content: PropTypes.string,
+      date: PropTypes.instanceOf(Date),
+      title: PropTypes.string,
     }),
     slug: PropTypes.string.isRequired,
   };
@@ -51,7 +51,7 @@ export default class Post extends PureComponent {
           <br />
           <br />
           <Divider />
-          {content
+          {content && content
             .split('\n')
             .map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </article>

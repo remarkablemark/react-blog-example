@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post when props.post={ content, date, title } renders correctly 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "minHeight": "calc(100vh - 114px)",
+      }
+    }
+  >
+    <Paper
+      circle={false}
+      rounded={true}
+      style={
+        Object {
+          "padding": 16,
+        }
+      }
+      transitionEnabled={true}
+      zDepth={0}
+    >
+      <article>
+        <h1>
+          Title
+        </h1>
+        <time
+          dateTime={2017-10-05T01:51:32.077Z}
+        >
+          42 minutes ago
+        </time>
+        <br />
+        <br />
+        <Divider
+          inset={false}
+        />
+        <p>
+          Content
+        </p>
+      </article>
+    </Paper>
+  </div>
+  <Divider
+    inset={false}
+  />
+  <Paper
+    circle={false}
+    rounded={true}
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+    transitionEnabled={true}
+    zDepth={0}
+  >
+    <footer>
+      Copyright 
+      2017
+       Acme Corp.
+    </footer>
+  </Paper>
+</div>
+`;
+
+exports[`Post when props.post=undefined renders correctly 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "minHeight": "calc(100vh - 114px)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "padding": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      <br />
+      <CircularProgress
+        max={100}
+        min={0}
+        mode="indeterminate"
+        size={80}
+        thickness={6}
+        value={0}
+      />
+    </div>
+  </div>
+  <Divider
+    inset={false}
+  />
+  <Paper
+    circle={false}
+    rounded={true}
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+    transitionEnabled={true}
+    zDepth={0}
+  >
+    <footer>
+      Copyright 
+      2017
+       Acme Corp.
+    </footer>
+  </Paper>
+</div>
+`;

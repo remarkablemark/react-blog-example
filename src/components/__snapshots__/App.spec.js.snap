@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MuiThemeProvider>
+    <BrowserRouter>
+      <div>
+        <withRouter(Header) />
+        <Switch>
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+          />
+          <Route
+            component={[Function]}
+            path="/posts/:id/:slug"
+          />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  </MuiThemeProvider>
+</Provider>
+`;

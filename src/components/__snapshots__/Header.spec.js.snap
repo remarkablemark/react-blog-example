@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header when props.location.pathname="/" renders correctly 1`] = `
+<AppBar
+  iconElementLeft={null}
+  showMenuIconButton={false}
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+  title="ACME CORP BLOG"
+  zDepth={1}
+/>
+`;
+
+exports[`Header when props.location.pathname="/posts/" renders correctly 1`] = `
+<AppBar
+  iconElementLeft={
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onClick={[Function]}
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <NavigationArrowBack />
+    </IconButton>
+  }
+  showMenuIconButton={true}
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+  title="ACME CORP BLOG"
+  zDepth={1}
+/>
+`;

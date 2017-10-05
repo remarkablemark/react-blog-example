@@ -7,7 +7,7 @@ import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 
 export const height = 64;
 
-class Header extends PureComponent {
+export class Header extends PureComponent {
   static propTypes = {
     location: PropTypes.shape({
       pathname: PropTypes.string,

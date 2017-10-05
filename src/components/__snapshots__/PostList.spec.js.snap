@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostList when props.isLoading=false renders correctly 1`] = `
+<div>
+  <Waypoint
+    bottomOffset="0px"
+    fireOnRapidScroll={true}
+    horizontal={false}
+    onEnter={[Function]}
+    onLeave={[Function]}
+    onPositionChange={[Function]}
+    topOffset="0px"
+  />
+  <br />
+  <br />
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <CircularProgress
+      max={100}
+      min={0}
+      mode="indeterminate"
+      size={80}
+      thickness={6}
+      value={0}
+    />
+  </div>
+  <br />
+</div>
+`;
+
+exports[`PostList when props.isLoading=true renders correctly 1`] = `
+<div>
+  <br />
+  <br />
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <CircularProgress
+      max={100}
+      min={0}
+      mode="indeterminate"
+      size={80}
+      thickness={6}
+      value={0}
+    />
+  </div>
+  <br />
+</div>
+`;
+
+exports[`PostList when props.posts=[{ date, id, slug, summary, title }] renders correctly 1`] = `
+<div>
+  <List>
+    <Link
+      replace={false}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+      to="/posts/abc123/slug"
+    >
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={false}
+        initiallyOpen={false}
+        insetChildren={false}
+        nestedItems={Array []}
+        nestedLevel={0}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      >
+        <article
+          style={
+            Object {
+              "lineHeight": 1.35,
+            }
+          }
+        >
+          <h2>
+            <strong>
+              Title
+            </strong>
+          </h2>
+          <p>
+            Summary
+            …
+          </p>
+          <div
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <time
+              dateTime={2017-10-05T01:51:32.077Z}
+            >
+              42 minutes ago
+            </time>
+          </div>
+        </article>
+      </ListItem>
+    </Link>
+    <Divider
+      inset={false}
+    />
+  </List>
+  <Waypoint
+    bottomOffset="0px"
+    fireOnRapidScroll={true}
+    horizontal={false}
+    onEnter={[Function]}
+    onLeave={[Function]}
+    onPositionChange={[Function]}
+    topOffset="0px"
+  />
+  <br />
+  <br />
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <CircularProgress
+      max={100}
+      min={0}
+      mode="indeterminate"
+      size={80}
+      thickness={6}
+      value={0}
+    />
+  </div>
+  <br />
+</div>
+`;
+
+exports[`PostList when props.posts=[{ date, id, slug, summary, title }] renders summary when length is greater than 150 1`] = `
+<p>
+  lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
+  …
+</p>
+`;
+
+exports[`PostList when props.posts=[{ date, id, slug, summary, title }] renders summary when length is less than 150 1`] = `
+<p>
+  lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+  …
+</p>
+`;
