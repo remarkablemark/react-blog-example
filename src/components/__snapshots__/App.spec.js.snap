@@ -26,6 +26,9 @@ exports[`App renders correctly 1`] = `
             component={[Function]}
             path="/posts/:id/:slug"
           />
+          <Route
+            render={[Function]}
+          />
         </Switch>
       </div>
     </BrowserRouter>
