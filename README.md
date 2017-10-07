@@ -4,9 +4,10 @@ A React blog example (see [demo on CodeSandbox](https://codesandbox.io/s/x218ro0
 
 ## Installation
 
-Download and enter project directory:
+Clone and enter the project directory:
 
 ```sh
+git clone https://github.com/remarkablemark/react-blog-example.git
 cd react-blog-example
 ```
 
@@ -91,3 +92,7 @@ CI=true npm test
 # yarn
 CI=true yarn test
 ```
+
+## License
+
+[MIT](LICENSE)

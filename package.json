@@ -47,5 +47,6 @@
       "npm run lint:fix",
       "git add"
     ]
-  }
+  },
+  "license": "MIT"
 }
