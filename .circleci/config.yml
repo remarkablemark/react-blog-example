@@ -1,0 +1,43 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # Use the same Docker base as the project
+      - image: node:latest
+      
+    working_directory: /app
+      
+    steps:
+      - checkout
+      
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      
+      - run:
+          name: run install
+          command: |
+             npm install
+      - save_cache:
+          paths:
+            - ./node-modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      
+      # run lint!
+      - run:
+          name: run lint
+          command: |
+            npm lint
+      
+      # run test!
+      - run:
+          name: run test
+          command: |
+            CI=true npm test
