@@ -28,7 +28,7 @@ describe('utilities', () => {
 
     beforeAll(() => {
       global.Date = jest.fn(() => ({
-        getFullYear: () => 2017,
+        getFullYear: () => 2020,
       }));
     });
 
@@ -37,7 +37,7 @@ describe('utilities', () => {
     });
 
     it('returns full year', () => {
-      expect(getFullYear()).toBe(2017);
+      expect(getFullYear()).toBe(2020);
     });
   });
 

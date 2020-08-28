@@ -82,7 +82,7 @@ describe('PostList', () => {
         fetchPosts: () => {},
         isLoading: false,
         posts: [{
-          date: new Date('2017-10-05T01:51:32.077Z'),
+          date: new Date('2020-10-05T01:51:32.077Z'),
           id: 'abc123',
           slug: 'slug',
           summary: 'Summary.',

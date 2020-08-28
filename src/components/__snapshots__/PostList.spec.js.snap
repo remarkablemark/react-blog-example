@@ -112,7 +112,7 @@ exports[`PostList when props.posts=[{ date, id, slug, summary, title }] renders 
             }
           >
             <time
-              dateTime={2017-10-05T01:51:32.077Z}
+              dateTime={2020-10-05T01:51:32.077Z}
             >
               42 minutes ago
             </time>

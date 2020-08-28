@@ -48,7 +48,7 @@ describe('Post', () => {
         id: 'abc123',
         post: {
           content: 'Content',
-          date: new Date('2017-10-05T01:51:32.077Z'),
+          date: new Date('2020-10-05T01:51:32.077Z'),
           title: 'Title',
         },
         slug: 'slug',
